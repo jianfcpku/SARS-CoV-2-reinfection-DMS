@@ -1,0 +1,3 @@
+library,name,run,fastq
+2mutBA5lib2T,2mutBA5lib2T,2mutBA5lib2T,../ccsfastq/2mutBA5lib2T.fastq.gz
+2mutBA5lib4T,2mutBA5lib4T,2mutBA5lib4T,../ccsfastq/2mutBA5lib4T.fastq.gz
