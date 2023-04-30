@@ -3,7 +3,7 @@ This repo contains DMS data analysis code and processed data of mAbs involved in
 
 ## Processing raw sequencing data (not available now)
 
-Raw PacBio sequencing data of variants in the library, and NGS data of barcodes before and after antibody screening are uploaded to [China National GeneBank][db.cngb.org] with accession number [CNP0004294][https://db.cngb.org/search/project/CNP0004294]. **The data will be available upon the final publication of the manuscript.** 
+Raw PacBio sequencing data of variants in the library, and NGS data of barcodes before and after antibody screening are uploaded to [China National GeneBank](db.cngb.org) with accession number [CNP0004294](https://db.cngb.org/search/project/CNP0004294). **The data will be available upon the final publication of the manuscript.** 
 
 Re-analysis of the raw sequencing data is time-consuming and not necessary for most purposes of reusing our results. You can skip this section if you would like to directly use our processed escape scores for each antibody.
 
@@ -11,7 +11,7 @@ Re-analysis of the raw sequencing data is time-consuming and not necessary for m
 
 We built two independent mutant libraries based on BA.5 RBD, named **2mutBA5lib2T** and **2mutBA5lib4T** respectively. Each of the two libraries were sequenced using PacBio SMRT Platform. The .fastq.gz files (ccs) the should be moved to `pacbio/ccsfastq/2mutBA5lib2T.fastq.gz` and `pacbio/ccsfastq/2mutBA5lib4T.fastq.gz`, respectively.
 
-We used the [pipeline from J. Bloom lab][https://github.com/jbloomlab/SARS-CoV-2-RBD_DMS/] to generate the barcode-variant table. You can enter the `pacbio/scripts` directory and run `do_process_ccs.sh`.
+We used the [pipeline from J. Bloom lab](https://github.com/jbloomlab/SARS-CoV-2-RBD_DMS/) to generate the barcode-variant table. You can enter the `pacbio/scripts` directory and run `do_process_ccs.sh`.
 
 The two libraries are then merged for the following experiments for antibody DMS. The merged library is referred to as **2mutBA5Tmerged**, and the corresponding barcode-variant table is `pacbio/outputs/codon_variant_table_2mutBA5Tmerged.csv`. The barcodes that conflict in the two libraries are dropped.
 
@@ -35,10 +35,10 @@ Scripts for merging and clustering the antibody DMS profiles are incorporated in
 
 ## Calculating the preference of mutations
 
-Neutralizing activities (pseudovirus IC50) of the antibodies against BA.5 and XBB.1.5 (`antibody_info.csv`), and [DMS on ACE2 binding and RBD expression of BA.2 from J. Bloom lab][https://doi.org/10.1371/journal.ppat.1010951] (`calculation/BA2_bind_expr.csv`, the same as [that in previous study][https://github.com/jianfcpku/convergent_RBD_evolution/blob/main/bind_expr/bind_expr_BA2.csv]) are needed for the calculation. You can also use other DMS datasets on ACE2 binding and RBD expression with the same format based on BA.5 or XBB.1.5 which might be published in the future to get potentially better results.
+Neutralizing activities (pseudovirus IC50) of the antibodies against BA.5 and XBB.1.5 (`antibody_info.csv`), and [DMS on ACE2 binding and RBD expression of BA.2 from J. Bloom lab](https://doi.org/10.1371/journal.ppat.1010951) (`calculation/BA2_bind_expr.csv`, the same as [that in previous study](https://github.com/jianfcpku/convergent_RBD_evolution/blob/main/bind_expr/bind_expr_BA2.csv) are needed for the calculation. You can also use other DMS datasets on ACE2 binding and RBD expression with the same format based on BA.5 or XBB.1.5 which might be published in the future to get potentially better results.
 
 We use the unfiltered merged DMS profiles after denoising according to medians (`antibody_dms_merge_no_filter_clean.csv`)
 
 See `calculation/calculate_preference.ipynb` for detail. 
 
-The pipeline is similar to [that in the previous study][https://github.com/jianfcpku/convergent_RBD_evolution], except for a modified weighting strategy for codon constraints, and an additional weight to correct the proportion of Omicron-specific (or cross-reactive) antibodies in the dataset, making the ratio the same as the unbiased ratio determined by ELISA (89% cross-reactive in BA.5/BF.7 BTI, and 51% in reinfection).
+The pipeline is similar to [that in the previous study](https://github.com/jianfcpku/convergent_RBD_evolution), except for a modified weighting strategy for codon constraints, and an additional weight to correct the proportion of Omicron-specific (or cross-reactive) antibodies in the dataset, making the ratio the same as the unbiased ratio determined by ELISA (89% cross-reactive in BA.5/BF.7 BTI, and 51% in reinfection).
