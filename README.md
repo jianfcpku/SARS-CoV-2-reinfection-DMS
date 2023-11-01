@@ -1,9 +1,9 @@
 # SARS-CoV-2-reinfection-DMS
-This repo contains DMS data analysis code and processed data of mAbs involved in the manuscript **Repeated Omicron infection alleviates SARS-CoV-2 immune imprinting** (Yisimayi et al. bioRxiv 2023. To be released.)
+This repo contains DMS data analysis code and processed data of mAbs involved in the manuscript **Repeated Omicron infection alleviates SARS-CoV-2 immune imprinting** ([Yisimayi et al. bioRxiv 2023](https://www.biorxiv.org/content/10.1101/2023.05.01.538516))
 
-## Processing raw sequencing data (not available now)
+## Processing raw sequencing data
 
-Raw PacBio sequencing data of variants in the library, and NGS data of barcodes before and after antibody screening are uploaded to [China National GeneBank](db.cngb.org) with accession number [CNP0004294](https://db.cngb.org/search/project/CNP0004294). **The data will be available upon the final publication of the manuscript.** 
+Raw PacBio sequencing data of variants in the library, and NGS data of barcodes before and after antibody screening have been uploaded to [China National GeneBank](db.cngb.org) with accession number [CNP0004294](https://db.cngb.org/search/project/CNP0004294). The data are also available on [Genome Sequence Archive (GSA) of China National Center for Bioinformation](https://ngdc.cncb.ac.cn/gsa) with Project accession [PRJCA020116](https://ngdc.cncb.ac.cn/bioproject/browse/PRJCA020116).
 
 Re-analysis of the raw sequencing data is time-consuming and not necessary for most purposes of reusing our results. You can skip this section if you would like to directly use our processed escape scores for each antibody.
 
